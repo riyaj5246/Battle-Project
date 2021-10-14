@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="1688.0" style="-fx-background-color: #490E7D;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="battleProject.Controller">
+   <children>
+      <Separator layoutX="746.0" layoutY="70.0" orientation="VERTICAL" prefHeight="270.0" prefWidth="14.0" />
+      <Label fx:id="userHeader" alignment="CENTER" contentDisplay="CENTER" layoutX="41.0" layoutY="63.0" prefHeight="18.0" prefWidth="111.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Inconsolata" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="1.0" />
+         </effect></Label>
+      <Button fx:id="start" layoutX="507.0" layoutY="14.0" mnemonicParsing="false" onAction="#startButton" prefHeight="30.0" prefWidth="61.0" style="-fx-background-color: #68F2D8; -fx-border-color: #000000; -fx-border-width: 2;" text="Start">
+         <font>
+            <Font name="Inconsolata" size="12.0" />
+         </font></Button>
+      <ListView fx:id="opponentsList" layoutX="247.0" layoutY="90.0" onMouseClicked="#opponentClicked" prefHeight="200.0" prefWidth="162.0" style="-fx-background-color: #68F2D8; -fx-border-color: #000000; -fx-border-width: 3;">
+         <effect>
+            <DropShadow />
+         </effect></ListView>
+      <ListView fx:id="scoresList" layoutX="28.0" layoutY="89.0" prefHeight="122.0" prefWidth="138.0" style="-fx-background-color: #68F2D8; -fx-border-color: #000000; -fx-border-width: 3;">
+         <effect>
+            <DropShadow />
+         </effect></ListView>
+      <Label fx:id="livesLbl" layoutX="28.0" layoutY="224.0" prefHeight="18.0" prefWidth="169.0" text="Lives:" textFill="WHITE">
+         <font>
+            <Font name="Inconsolata" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.9" />
+         </effect></Label>
+      <Label fx:id="battlesWonLbl" layoutX="28.0" layoutY="248.0" prefHeight="18.0" prefWidth="162.0" text="Battles Won:" textFill="WHITE">
+         <font>
+            <Font name="Inconsolata" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.9" />
+         </effect></Label>
+      <Label fx:id="battlesLostLbl" layoutX="28.0" layoutY="270.0" prefHeight="18.0" prefWidth="162.0" text="Battles Lost:" textFill="WHITE">
+         <font>
+            <Font name="Inconsolata" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.9" />
+         </effect></Label>
+      <Label fx:id="winStreakLbl" layoutX="28.0" layoutY="295.0" prefHeight="18.0" prefWidth="162.0" text="Winstreak:" textFill="WHITE">
+         <font>
+            <Font name="Inconsolata" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.9" />
+         </effect></Label>
+      <Button fx:id="battleBtn" disable="true" layoutX="268.0" layoutY="298.0" mnemonicParsing="false" onAction="#battleButton" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #68F2D8; -fx-border-color: #000000; -fx-border-width: 2;" text="Battle">
+         <font>
+            <Font name="Inconsolata" size="13.0" />
+         </font>
+         <effect>
+            <ColorAdjust contrast="0.3" hue="-1.0" saturation="-0.3" />
+         </effect></Button>
+      <Separator layoutX="200.0" layoutY="70.0" orientation="VERTICAL" prefHeight="269.0" prefWidth="14.0" />
+      <Separator layoutX="438.0" layoutY="70.0" orientation="VERTICAL" prefHeight="270.0" prefWidth="14.0" />
+      <ListView fx:id="powerupsList" layoutX="475.0" layoutY="89.0" onMouseClicked="#powerUpClicked" prefHeight="139.0" prefWidth="250.0" style="-fx-background-color: #68F2D8; -fx-border-width: 3; -fx-border-color: #000000;">
+         <effect>
+            <DropShadow />
+         </effect></ListView>
+      <ListView fx:id="recordList" layoutX="780.0" layoutY="90.0" prefHeight="200.0" prefWidth="120.0" style="-fx-background-color: #68F2D8; -fx-border-color: #000000; -fx-border-width: 3;">
+         <effect>
+            <DropShadow />
+         </effect></ListView>
+      <Label fx:id="opponentsHeader" alignment="CENTER" contentDisplay="CENTER" layoutX="259.0" layoutY="61.0" prefHeight="18.0" prefWidth="138.0" textFill="WHITE">
+         <font>
+            <Font name="Inconsolata" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+      </Label>
+      <Label fx:id="powerupsHeader" alignment="CENTER" contentDisplay="CENTER" layoutX="534.0" layoutY="63.0" prefHeight="18.0" prefWidth="131.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Inconsolata" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+      </Label>
+      <Label fx:id="statsHeader" alignment="CENTER" contentDisplay="CENTER" layoutX="784.0" layoutY="61.0" prefHeight="18.0" prefWidth="111.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Inconsolata" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+      </Label>
+      <TextField fx:id="usernameTxt" alignment="CENTER" layoutX="295.0" layoutY="14.0" onAction="#usernameEntered" prefHeight="28.0" prefWidth="204.0" style="-fx-background-color: #B0F2E5; -fx-border-color: #68F2D8; -fx-border-width: 3;" text="Please enter a username">
+         <font>
+            <Font name="Inconsolata" size="12.0" />
+         </font></TextField>
+      <Label fx:id="bankLbl" layoutX="27.0" layoutY="318.0" prefHeight="18.0" prefWidth="162.0" text="Bank:" textFill="WHITE">
+         <font>
+            <Font name="Inconsolata" size="14.0" />
+         </font>
+         <effect>
+            <Glow level="0.9" />
+         </effect></Label>
+      <Button fx:id="powerUpBtn" disable="true" layoutX="530.0" layoutY="246.0" mnemonicParsing="false" onAction="#buyPowerup" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: #68F2D8; -fx-border-color: #000000; -fx-border-width: 2;" text="Buy Power Up">
+         <font>
+            <Font name="Inconsolata" size="13.0" />
+         </font>
+         <effect>
+            <ColorAdjust contrast="0.3" hue="-1.0" saturation="-0.3" />
+         </effect></Button>
+      <Button fx:id="skillLvlUpBtn" layoutX="486.0" layoutY="300.0" mnemonicParsing="false" onAction="#skillLvlUp" prefHeight="30.0" prefWidth="102.0" style="-fx-background-color: #B0F2E5; -fx-border-width: 2; -fx-border-color: #000000;" text="Level Up" visible="false">
+         <font>
+            <Font name="Inconsolata" size="13.0" />
+         </font></Button>
+      <Button fx:id="enemyInfoBtn" layoutX="601.0" layoutY="300.0" mnemonicParsing="false" onAction="#enemyInfo" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #B0F2E5; -fx-border-width: 2; -fx-border-color: #000000;" text="Display Info" visible="false">
+         <font>
+            <Font name="Inconsolata" size="13.0" />
+         </font></Button>
+      <ListView fx:id="updatesList" layoutX="25.0" layoutY="393.0" prefHeight="165.0" prefWidth="883.0" style="-fx-background-color: #68F2D8; -fx-border-width: 3; -fx-border-color: #000000;">
+         <effect>
+            <DropShadow />
+         </effect></ListView>
+      <Rectangle fx:id="instructionsRect" arcHeight="5.0" arcWidth="5.0" height="534.0" layoutX="5.0" layoutY="63.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke-width: 5;" visible="false" width="937.0" />
+      <Text fx:id="instructionsTxt" fill="#91f7ff" layoutX="25.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Battle Game! In this game, your main objective is to win as many battles as possible while also increasing your skill scores - you win if you get all scores to 10 or kill every opponent. Every time you win, your skill scores have a chance to increase, and the higher your skill scores are, the more likely you are to win! The battles are based off of whether you or your opponent have better skill scores, but there's a catch - you don't know your opponent's scores! However, there are some features to help you out. You start off with $200 in your bank, which you can use to buy powerups. Every time you win a battle, money is deposited to your bank, and the higher your winstreak, the more you make! Also, if you win, all of your lives are replenished back to 3, so the only way to lose is by losing three battles in a row. That's all - now go out there and BATTLE!" textAlignment="CENTER" visible="false" wrappingWidth="877.1367034912109">
+         <font>
+            <Font name="Inconsolata" size="28.0" />
+         </font>
+      </Text>
+      <Button layoutX="771.0" layoutY="17.0" mnemonicParsing="false" onAction="#instructionsBtn" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #68F2D8; -fx-border-width: 2; -fx-border-color: #000000;" text="Instructions">
+         <font>
+            <Font name="Inconsolata" size="13.0" />
+         </font></Button>
+      <Button layoutX="679.0" layoutY="16.0" mnemonicParsing="false" onAction="#resetButton" prefHeight="30.0" prefWidth="77.0" style="-fx-background-color: #68F2D8; -fx-border-width: 2; -fx-border-color: #000000;" text="Reset">
+         <font>
+            <Font name="Inconsolata" size="13.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
